@@ -1,43 +1,7 @@
-"use strict"
+"use strict";
 
 // ROCK, PAPER, SCISSOR
 
-
-// function getRandom(min, max) {
-//   return Math.random() * (100 - 1) + 1
-// }
-
-
-// if (brugerInput === randomNumber) {
-//   brugerSvar.textContent = "Du gættede rigtigt!";
-// } else if (brugerInput > randomNumber) {
-//   brugerSvar.textContent = "For højt! Prøv igen.";
-// } else {
-//   brugerSvar.textContent = "For lavt! Prøv igen.";
-// }
-
-// presentPet("Rock", "Paper", "Scissor")
-// function presentPet(rock, paper, scissor) {
-//   // console.log(`My name is ${firstName} I have a ${petType} and his name is ${petName}`)
-//   const rockButton = document.getElementById('  rock');
-//   const paperButton = document.getElementById('paper');
-//   const scissorsButton = document.getElementById('scissors');
-//   const resultDisplay = document.getElementById('result');
-
-//   rockButton.addEventListener('click', () => gamlePlay('rock'));
-// paperButton.addEventListener('click', () => gamlePlay('paper'));
-// scissorsButton.addEventListener('click', () => gamlePlay('scissors'));
-
-//   if(player1 === randonNumber) {
-
-//   } else if(){
-
-//   } else{
-
-//   }
-
-
-// }
 
 const player1 = document.getElementById("player1");
 const player2 = document.getElementById("player2"); 
