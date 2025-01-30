@@ -32,6 +32,7 @@ function klikScissors() {
 }
 
 function computerChooses() {
+  
   // console.log("COMPUTER CHOOSES user choice:", userChoice)
   const randomNumber = Math.floor(Math.random() * 3)
 
@@ -46,6 +47,8 @@ function computerChooses() {
   console.log("userChoice", userChoice)
   console.log("compChoice", compChoice)
   determineWinner()
+  removeRPCClasses()
+
 }
 
 function determineWinner() {
@@ -73,6 +76,7 @@ function determineWinner() {
 
   console.log("The winner is: ", winner)
   randomAnimation()
+  
 }
 
 function randomAnimation() {
@@ -104,7 +108,7 @@ function handAnimationEnd() {
 
     player2.classList.add("rock")
 
-  } else if (userChoice === "paper") {
+  } else if (compChoice === "paper") {
 
     player2.classList.add("paper")
 
@@ -113,10 +117,28 @@ function handAnimationEnd() {
     player2.classList.add("scissors")
   }
 
+  showWinnerScreen();
+
 }
+
+function showWinnerScreen() {
+  if(winner === "none") {
+    document.querySelector("#draw").classList.remove(".hidden")
+  } else if (winner === "user") {
+    document.querySelector("#win").classList.remove(".hidden")
+  } else {
+    document.querySelector("#lose").classList.remove(".hidden")
+  }
+}
+
 
 function removeRPCClasses() {
   player1.classList.remove("rock", "paper", "scissors")
   player2.classList.remove("rock", "paper", "scissors")
 
+  document.querySelector("#lose").classList.add(".hidden")
+  document.querySelector("#win").classList.add(".hidden")
+  document.querySelector("#draw").classList.add(".hidden")
+
 }
+
